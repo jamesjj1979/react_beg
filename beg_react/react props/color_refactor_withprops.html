@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statless functional components inline</title>
+    <!--REACT LIBRARY-->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <!--REACT DOM LIBRARY-->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <!--BABEL LIBRARY-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="app">React not rendered</div>
+
+    <script type="text/babel">
+     
+
+
+        class Colers extends React.Component{
+          render(){
+            var styles={
+            height: 50,
+            width: 150,
+            backgroundColor: this.props.bg,
+            }
+            return(
+            <h1 style={styles}>{this.props.bg}</h1>
+            )
+          }
+        }
+      ReactDOM.render(
+        //first staless functional component
+
+        <div>
+          <Colers bg="red" />
+          <Colers bg="orange" />
+          <Colers bg="yellow" />
+          <Colers bg="green" />
+          <Colers bg="blue" />
+          <Colers bg="indigo" />
+          <Colers bg="violet" />
+        </div>,
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>

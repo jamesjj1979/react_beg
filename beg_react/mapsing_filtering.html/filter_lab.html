@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+var weather =[72,84,34,56,92,24,47,85,72,54];
+var gooutside=[]
+
+for(let i=0;i<weather.length;i++){
+    if (weather[i]>= 70) {
+        gooutside.push(weather[i])
+         
+    }
+}
+console.log(gooutside) 
+
+var goOutSide= weather.filter(function(test){
+    return test>=70;
+})
+console.log(goOutSide)
+
+var forcast=[
+    {day:'monday',sun:true},
+    {day:'tuesday',sun:false},
+    {day:'wednesday',sun:false},
+    {day:'thusday',sun:true},
+    {day:'friday',sun:false},
+    {day:'saturday',sun:true},
+    {day:'sunday',sun:false},
+]
+
+var sunnyDays= []
+
+forcast.filter(function(test){
+    if(test.sun===true){
+        sunnyDays.push(test)
+    }
+   
+})
+ console.log(sunnyDays)
+
+    </script>
+</body>
+</html>

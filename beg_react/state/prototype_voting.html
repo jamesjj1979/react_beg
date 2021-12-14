@@ -1,0 +1,92 @@
+<!-- INSERT BOILER PLATE CODE -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- REACT LIBRARY -->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <title>Boiler Plate Code</title>
+  </head>
+  <body>
+    <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT  -->
+    <div id="app">React has not rendered yet</div>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/babel">
+      class DinnerVote extends React.Component {
+        render() {
+         
+          var dinnerVoteStyle = {
+            display: "inline-block",
+            margin:30,
+
+          };
+          return (
+            <div style={dinnerVoteStyle}>
+              <Avatar img={this.props.img} />
+              <DinnerTime />
+              <Voting/>
+              
+            </div>
+          );
+        }
+      }
+
+      function Avatar(props) {
+        var avitarStyle = {
+          width: 200,
+          height: 200,
+        };
+        return <img src={props.img} style={avitarStyle}></img>;
+      }
+      function DinnerTime() {
+        return <h1>Dinner Time</h1>;
+      }
+      class Voting extends React.Component{
+        constructor(props) {
+        super(props);
+        this.state = {
+          total: 0
+        };
+      }
+      onButtonAdd() {
+        this.setState({
+          total: this.state.total +1
+        });
+        
+      }
+      onButtonSub() {
+        this.setState({
+          total: this.state.total-1
+        });
+        
+      }
+          render(){
+              return(
+                  <div>
+                  <p>VoteHere If You Want This</p>
+                  <button onClick={()=>this.onButtonAdd()}>+1</button>
+                  <p>VoteHere If You do not Want This</p>
+                  <button onClick={()=>this.onButtonSub()}>-1</button>
+                  <p>total:{this.state.total}</p>
+                  </div>
+              )
+          }
+      }
+      ReactDOM.render(
+        <div>
+          <DinnerVote img="https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg" />
+          <DinnerVote img="https://static.pexels.com/photos/58722/pexels-photo-58722.jpeg" />
+          <DinnerVote img="https://static.pexels.com/photos/70497/pexels-photo-70497.jpeg" />
+        </div>,
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>

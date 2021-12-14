@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project 1</title>
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <!--REACT DOM LIBRARY-->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <!--BABEL LIBRARY-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <!--fontawsome-->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="app">React has not rendered</div>
+
+    <script type="text/babel">
+      //friendly complex component
+      function FriendLy(props) {
+        var friendlyStyle = {
+          height: 300,
+          width: 200,
+          padding: 0,
+          backgroundColor: "fff",
+          WebkitFilter: "drop-shadow(0px 0px 5px #555)",
+          filter: "drop-shadow(0px 0px 5px #555)",
+          backgroundColor: "green",
+          display: "inline-block",
+          margin: 20,
+        };
+        return (
+          <div style={friendlyStyle}>
+            <Avatar img={props.img} />
+            <UserName name={props.name} />
+            <GetConnected />
+          </div>
+        );
+      }
+      //avatar component
+      function Avatar(props) {
+        var avatarStyle = {
+          marginLeft: 26,
+          marginTop: 20,
+          width: 150,
+          height: 150,
+          borderRadius: "50%",
+        };
+        return <img src={props.img} alt="pic" style={avatarStyle} />;
+      }
+      //user name component
+      function UserName(props) {
+        var nameStyle = {
+          fontSize: 24,
+          fontFamily: "arial,helvetica,sans-serif",
+          margin: 20,
+          textAlign: "center",
+        };
+        return <h1 style={nameStyle}>{props.name}</h1>;
+      }
+      //GetConnected complex component
+      function GetConnected() {
+        var getConnectedStyle = {
+          marginLeft: 15,
+        };
+        return (
+          <div style={getConnectedStyle}>
+            <Like />
+            <Share />
+            <Add />
+          </div>
+        );
+      }
+      var iconStyle = {
+        margin: 20,
+      };
+
+      //like component
+      function Like() {
+        return <i className="fas fa-thumbs-up" style={iconStyle}></i>;
+      }
+      //share component
+      function Share() {
+        return <i className="fas fa-share" style={iconStyle}></i>;
+      }
+      //add component
+      function Add() {
+        return <i className="fas fa-plus-circle" style={iconStyle}></i>;
+      }
+      ReactDOM.render(
+        <div>
+          <FriendLy
+            name="jim"
+            img="https://media-exp1.licdn.com/dms/image/C4E03AQFf1_kcR3WgNw/profile-displayphoto-shrink_400_400/0/1620397040929?e=1643846400&v=beta&t=WuZzo_kJbnry6TNRRfaeRPbAmIlrp5crlq9pAKVMhlQ"
+          />
+          <FriendLy
+            name="hulk"
+            img="https://i.pinimg.com/564x/60/6b/da/606bdaba2eb60f42184e1cd5dbf9bd3f.jpg"
+          />
+          <FriendLy
+            name="hulk"
+            img="https://media-exp1.licdn.com/dms/image/C4E03AQFf1_kcR3WgNw/profile-displayphoto-shrink_400_400/0/1620397040929?e=1643846400&v=beta&t=WuZzo_kJbnry6TNRRfaeRPbAmIlrp5crlq9pAKVMhlQ"
+          />
+          <FriendLy
+            name="hulk"
+            img="https://media-exp1.licdn.com/dms/image/C4E03AQFf1_kcR3WgNw/profile-displayphoto-shrink_400_400/0/1620397040929?e=1643846400&v=beta&t=WuZzo_kJbnry6TNRRfaeRPbAmIlrp5crlq9pAKVMhlQ"
+          />
+          <FriendLy
+            name="hulk"
+            img="https://media-exp1.licdn.com/dms/image/C4E03AQFf1_kcR3WgNw/profile-displayphoto-shrink_400_400/0/1620397040929?e=1643846400&v=beta&t=WuZzo_kJbnry6TNRRfaeRPbAmIlrp5crlq9pAKVMhlQ"
+          />
+          <FriendLy
+            name="hulk"
+            img="https://media-exp1.licdn.com/dms/image/C4E03AQFf1_kcR3WgNw/profile-displayphoto-shrink_400_400/0/1620397040929?e=1643846400&v=beta&t=WuZzo_kJbnry6TNRRfaeRPbAmIlrp5crlq9pAKVMhlQ"
+          />
+          <FriendLy
+            name="hulk"
+            img="https://media-exp1.licdn.com/dms/image/C4E03AQFf1_kcR3WgNw/profile-displayphoto-shrink_400_400/0/1620397040929?e=1643846400&v=beta&t=WuZzo_kJbnry6TNRRfaeRPbAmIlrp5crlq9pAKVMhlQ"
+          />
+          <FriendLy
+            name="hulk"
+            img="https://media-exp1.licdn.com/dms/image/C4E03AQFf1_kcR3WgNw/profile-displayphoto-shrink_400_400/0/1620397040929?e=1643846400&v=beta&t=WuZzo_kJbnry6TNRRfaeRPbAmIlrp5crlq9pAKVMhlQ"
+          />
+          <FriendLy
+            name="hulk"
+            img="https://media-exp1.licdn.com/dms/image/C4E03AQFf1_kcR3WgNw/profile-displayphoto-shrink_400_400/0/1620397040929?e=1643846400&v=beta&t=WuZzo_kJbnry6TNRRfaeRPbAmIlrp5crlq9pAKVMhlQ"
+          />
+          <FriendLy
+            name="hulk"
+            img="https://media-exp1.licdn.com/dms/image/C4E03AQFf1_kcR3WgNw/profile-displayphoto-shrink_400_400/0/1620397040929?e=1643846400&v=beta&t=WuZzo_kJbnry6TNRRfaeRPbAmIlrp5crlq9pAKVMhlQ"
+          />
+        </div>,
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>

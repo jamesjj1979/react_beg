@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+
+
+
+
+var forcast=[
+{day:'monday',sun:true,humidity:10},
+{day:'tuesday',sun:false,humidity:100},
+{day:'wednesday',sun:false,humidity:100},
+{day:'thursday',sun:true,humidity:25},
+{day:'friday',sun:false,humidity:100},
+{day:'saturday',sun:true,humidity:15},
+{day:'sunday',sun:false,humidity:100}
+]
+
+var humid =forcast.map(function(wetness){
+    return wetness.humidity;
+})
+console.log(humid)
+    </script>
+</body>
+</html>
